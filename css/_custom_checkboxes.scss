@@ -1,0 +1,61 @@
+.custom_checkbox {
+  display: none;
+}
+
+.custom_checkbox + label {
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #616161;
+}
+
+.custom_checkbox + label::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-color: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 2px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 15px auto;
+}
+
+.custom_checkbox:checked + label {
+  color: #000000;
+}
+
+.custom_checkbox:checked + label::before {
+  background-color: #7DA152;
+  border-color: #7DA152;
+  background-image: url("../../img/ok_icon.svg");
+}
+
+.custom_checkbox.radio + label::before {
+  border-radius: 20px;
+}
+
+.custom_checkbox.radio:checked + label::before {
+  background-image: none;
+}
+
+.custom_checkbox.radio:checked + label::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: white;
+  position: absolute;
+  left: 4.5px;
+  top: 4.5px;
+}

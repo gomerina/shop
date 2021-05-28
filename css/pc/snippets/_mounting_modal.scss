@@ -1,0 +1,76 @@
+.mounting {
+  .box {
+    width: 785px;
+
+    ol,
+    ul,
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .owl-carousel {
+      position: relative;
+
+      .owl-nav {
+        position: absolute;
+        left: 0;
+        top: 40%;
+        width: 100%;
+
+        button {
+          width: auto;
+          background: none;
+          border-width: 0;
+          cursor: pointer;
+          position: absolute;
+          left: 0;
+          top: 0;
+
+          span {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background-color: #E8E8E8;
+            border-radius: 4px;
+            color: rgba(255, 255, 255, 0);
+            background-image: url("../../../../img/left-chevron.svg");
+            background-position: center center;
+            background-size: 20px 20px;
+            background-repeat: no-repeat;
+
+            @include transition(background-color 0.3s);
+          }
+
+          &.owl-next {
+            left: auto;
+            right: 0;
+
+            span {
+              background-image: url("../../../../img/right-chevron.svg");
+            }
+          }
+
+          &:hover,
+          &:active {
+            span {
+              background-color: #97D64A;
+            }
+          }
+        }
+      }
+    }
+  }
+}

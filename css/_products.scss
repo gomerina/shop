@@ -1,0 +1,146 @@
+@import "transitions";
+
+.products-list {
+  .item {
+    position: relative;
+    display: block;
+    background: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    padding: 20px;
+    border: 1px solid #FFFFFF;
+
+    @include transition(border-color 0.3s);
+
+    &:hover,
+    &:active {
+      border-color: #62B25A;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 220px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .name {
+      margin-top: 20px;
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 140%;
+      color: #616161;
+    }
+
+    .rating {
+      margin-bottom: 25px;
+    }
+
+    .price {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 140%;
+      color: #000000;
+      padding-right: 60px;
+
+      &.sale {
+        span:first-child {
+          color: #FF2A50!important;
+        }
+      }
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+
+        &.old {
+          text-decoration: line-through;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 140%;
+          color: #000000;
+          margin-right: 0;
+        }
+      }
+    }
+
+    .add-to-cart {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      width: 55px;
+      height: 55px;
+      border-radius: 55px;
+      background: #62B25A;
+      cursor: pointer;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+
+      @include transition(background 0.3s);
+
+      &:hover,
+      &:active {
+        background: darken(#62B25A, 15%)
+      }
+    }
+
+    .badges {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+
+      .badge {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        background: #DDFEB5;
+        border-radius: 3px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 140%;
+        color: #528C0B;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &.sale {
+          background: #FFC1AE;
+          color: #C85849;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .icon {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+
+      svg {
+        stroke: #ACACAC;
+
+        @include transition(stroke 0.3s);
+      }
+
+      &.add-to-comparison {
+        top: 60px;
+      }
+
+      &:hover,
+      &:active {
+        svg {
+          stroke: #62B25A;
+        }
+      }
+    }
+  }
+}

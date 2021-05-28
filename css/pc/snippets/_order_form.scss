@@ -1,0 +1,67 @@
+.order-form {
+  margin-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 115px;
+  padding-right: 115px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+
+  .headline {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 130%;
+    color: #000000;
+  }
+
+  .description {
+    margin-bottom: 50px;
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 150%;
+    font-feature-settings: 'pnum' on, 'onum' on;
+    color: #3F3F3F;
+  }
+
+  .form-group {
+    input {
+      width: 100%;
+      font-size: 18px;
+      line-height: 150%;
+    }
+
+    &.telephone {
+      position: relative;
+
+      label {
+        font-weight: 500;
+        position: absolute;
+        left: 15px;
+        top: 0;
+        height: 100%;
+        font-family: Open Sans, sans-serif;
+        font-size: 18px;
+        line-height: 150%;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-right: 1px solid #CECECE;
+      }
+
+      input {
+        padding-left: 95px;
+      }
+    }
+  }
+
+  .submit-button {
+    font-size: 18px;
+    line-height: 150%;
+    width: 210px;
+  }
+}
